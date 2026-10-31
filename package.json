@@ -1,0 +1,45 @@
+{
+  "name": "event-hub",
+  "version": "1.0.0",
+  "description": "Event-HuB – Institutional Activity Management System",
+  "main": "server/server.js",
+  "type": "module",
+  "scripts": {
+    "install-all": "npm install --prefix server && npm install --prefix client",
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "build": "npm run build --prefix client",
+    "start": "npm start --prefix server",
+    "reset-db": "npm run reset-db --prefix server",
+    "seed-events": "npm run seed-events --prefix server"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "exceljs": "^4.4.0",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0",
+    "helmet": "^7.1.0",
+    "jimp": "^1.6.1",
+    "json2csv": "^6.0.0-alpha.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.13",
+    "pdfkit": "^0.15.0",
+    "qrcode": "^1.5.4"
+  },
+  "keywords": [
+    "mern",
+    "react",
+    "express",
+    "mongodb",
+    "event-management",
+    "institutional-management",
+    "certificate-generator"
+  ],
+  "license": "MIT"
+}

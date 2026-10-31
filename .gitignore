@@ -1,0 +1,73 @@
+# ==========================================
+# Event-HuB – Master .gitignore
+# ==========================================
+
+# Dependencies
+node_modules/
+*/node_modules/
+.pnp
+.pnp.js
+
+# Production Builds & Bundles
+dist/
+dist-ssr/
+build/
+coverage/
+*.tsbuildinfo
+
+# Environment & Secrets (CRITICAL)
+.env
+.env.*
+!.env.example
+!.env.*.example
+*/.env
+*/.env.*
+!*/.env.example
+!*/.env.*.example
+
+# Local Uploads & Generated Media (Folder structure preserved via .gitkeep)
+uploads/*
+!uploads/.gitkeep
+!uploads/certificates/
+uploads/certificates/*
+!uploads/certificates/.gitkeep
+server/uploads/*
+!server/uploads/.gitkeep
+!server/uploads/certificates/
+server/uploads/certificates/*
+!server/uploads/certificates/.gitkeep
+
+# Temporary Test Outputs & Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+test.png
+test-output.pdf
+test_preview.pdf
+processed_sig.png
+dummy_sig.png
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE & Editor Configs
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.sublime-project
+*.sublime-workspace
