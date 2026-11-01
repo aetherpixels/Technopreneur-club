@@ -11,6 +11,20 @@ if (API_BASE_URL) {
 }
 axios.defaults.withCredentials = true;
 
+// Automatically attach Bearer token to Authorization headers if present
+const savedToken = localStorage.getItem('token');
+if (savedToken) {
+  axios.defaults.headers.common['Authorization'] = `Bearer ${savedToken}`;
+}
+
+axios.interceptors.request.use((config) => {
+  const token = localStorage.getItem('token');
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
